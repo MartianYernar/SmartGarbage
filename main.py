@@ -41,18 +41,21 @@ while True:
             serialInst.write(angle.encode('utf-8'))
             sleep(5)
         
-        # elif class_label == "plastic":
-        #     # angle = 90
+        elif class_label == "plastic":
+            angle = "180"
+            serialInst.write(angle.encode('utf-8'))
+            sleep(5)
         
-        # if class_label == "paper":
-        #     angle = 180
+        elif class_label == "paper":
+            angle = "270"
+            serialInst.write(angle.encode('utf-8'))
+            sleep(5)
+
+        
         class_label = ""
         
         
         # cv2.imshow('', anno)
-
-        
-
         # cv2.waitKey(1)
     except Exception as ex:
         print(ex)
